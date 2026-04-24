@@ -1,4 +1,4 @@
-apiVersion: eventing.knative.dev/v1alpha1
+apiVersion: eventing.knative.dev/v1
 kind: Trigger
 metadata:
   name: reply-trigger-test
@@ -6,11 +6,11 @@ metadata:
 spec:
   broker: default
   filter:
-    sourceAndType:
+    attributes:
       type: ""
       source: "https://knative.dev/josiemundi/transactionClassified"
   subscriber:
     ref:
-      apiVersion: serving.knative.dev/v1alpha1
+      apiVersion: serving.knative.dev/v1
       kind: Service
       name: test-display

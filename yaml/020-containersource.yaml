@@ -1,4 +1,4 @@
-apiVersion: sources.eventing.knative.dev/v1alpha1
+apiVersion: sources.knative.dev/v1
 kind: ContainerSource
 metadata:
   name: wssource
@@ -9,6 +9,7 @@ spec:
       containers:
         - image: docker.io/josiemundi/wssourcecloudevents
   sink:
-    apiVersion: serving.knative.dev/v1
-    kind: Service
-    name: event-display
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: event-display

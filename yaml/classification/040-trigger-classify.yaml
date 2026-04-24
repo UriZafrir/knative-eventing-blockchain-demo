@@ -1,5 +1,5 @@
 # Knative Eventing Trigger to trigger the helloworld-go service
-apiVersion: eventing.knative.dev/v1alpha1
+apiVersion: eventing.knative.dev/v1
 kind: Trigger
 metadata:
   name: classifier-trigger
@@ -7,10 +7,10 @@ metadata:
 spec:
   broker: default
   filter:
-    sourceAndType:
+    attributes:
       type: ""
       source: "wss://ws.blockchain.info/inv"
-  subscriber:    
+  subscriber:
     ref:
       apiVersion: v1
       kind: Service
