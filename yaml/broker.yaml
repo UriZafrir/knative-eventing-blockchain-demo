@@ -13,7 +13,7 @@ spec:
     apiVersion: v1
     kind: ConfigMap
     name: kafka-broker-config
-    namespace: knative-eventing-websocket-source
+    namespace: knative-eventing-blockchain-demo
   # Optional dead letter sink, you can specify either:
   #  - deadLetterSink.ref, which is a reference to a Callable
   #  - deadLetterSink.uri, which is an absolute URI to a Callable (It can potentially be out of the Kubernetes cluster)
