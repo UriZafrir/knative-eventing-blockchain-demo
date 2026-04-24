@@ -2,7 +2,6 @@ apiVersion: sources.knative.dev/v1
 kind: ContainerSource
 metadata:
   name: wssource
-  namespace: knative-eventing-websocket-source
 spec:
   template:
     spec:
