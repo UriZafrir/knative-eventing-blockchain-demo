@@ -188,7 +188,7 @@ metadata:
   name: imc-controller
   namespace: knative-eventing
   labels:
-    # knative.dev/high-availability: "true"
+    knative.dev/high-availability: "true"
     app.kubernetes.io/component: imc-controller
     app.kubernetes.io/version: "1.21.2"
     app.kubernetes.io/name: knative-eventing
@@ -367,7 +367,7 @@ metadata:
   name: imc-dispatcher
   namespace: knative-eventing
   labels:
-    # knative.dev/high-availability: "true"
+    knative.dev/high-availability: "true"
     app.kubernetes.io/component: imc-dispatcher
     app.kubernetes.io/version: "1.21.2"
     app.kubernetes.io/name: knative-eventing
